@@ -27,6 +27,8 @@ body{
 
 header{
     background-color: var(--corazul);
+    position: sticky;
+    top: 0;
 }
 
 .navbar{
@@ -55,9 +57,6 @@ nav{
 .navbar-toggler{
     border: 0px solid #1359A3;
 }
-div > table{
-    overflow-x: auto;
-}
 
 table{
     border-collapse: collapse;
@@ -65,11 +64,23 @@ table{
     font-family: var(--fonte-padrão);
 }
 
+.table-aprovados{
+  overflow-x: auto;
+}
+
 th, td{
     text-align: center;
     border: 1px solid black;
     padding: 8px;
     background-color: white;
+}
+thead th {
+        position: sticky;
+        top: 0;
+      }
+a{
+  color: aqua;
+  font-weight: 800;
 }
 </style>
 </head>
@@ -130,19 +141,19 @@ th, td{
    <!--Defina uma largura para a tabela-->
    <main>
     <article>
-        <div class="overflow-x-auto">
+        <div class="table-aprovados">
             <table>
                 <thead>
                     <tr>
-                        <th rowspan="2">Posição</th>
-                        <th rowspan="2">Candidato (a)</th>
-                        <th colspan="2">Média</th>
-                        <th rowspan="2">Média Final</th>
-                        <th rowspan="2">Situação</th>
+                        <th rowspan="2" scope="col">Posição</th>
+                        <th rowspan="2" scope="col">Candidato (a)</th>
+                        <th colspan="2" scope="colgroup">Média</th>
+                        <th rowspan="2" scope="col">Média Final</th>
+                        <th rowspan="2" scope="col">Situação</th>
                     </tr>
                     <tr>
-                        <th>1ª Fase</th>
-                        <th>2ª Fase</th>
+                        <th scope="col">1ª Fase</th>
+                        <th scope="col">2ª Fase</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -170,10 +181,192 @@ th, td{
                         <td>966,8</td>
                         <td>Aprovado (a)</td>
                     </tr>
+                    <tr>
+                      <td>4º</td>
+                      <td>Jonas Araújo Lima</td>
+                      <td>960,0</td>
+                      <td>897,8</td>
+                      <td>928,9</td>
+                      <td>Aprovado(a)</td>
+                    </tr>
+                    <tr>
+                      <td>5º</td>
+                      <td>Davi Lima dos Santos</td>
+                      <td>947,2</td>
+                      <td>860,0</td>
+                      <td>903,6</td>
+                      <td>Aprovado (a)</td>
+                    </tr>
+                    <tr>
+                      <td>6º</td>
+                      <td>Joana Melo Oliveira</td>
+                      <td>919,9</td>
+                      <td>870,5</td>
+                      <td>895,2</td>
+                      <td>Aprovado (a)</td>
+                    </tr>
+                    <tr>
+                      <td>7º</td>
+                      <td>João Pedro Wilson Gunterg</td>
+                      <td>850,3</td>
+                      <td>874,0</td>
+                      <td>862,1</td>
+                      <td>Aprovado (a)</td>
+                    </tr>
+                    <tr>
+                      <td>8º</td>
+                      <td>Mike Tyson Guntergerb</td>
+                      <td>847,3</td>
+                      <td>860,0</td>
+                      <td>853,6</td>
+                      <td>Aprovado (a)</td>
+                    </tr>
+                    <tr>
+                      <td>9º</td>
+                      <td>Mohammed Alí Salí-AL Bashar</td>
+                      <td>835,3</td>
+                      <td>798,9</td>
+                      <td>817,1</td>
+                      <td>Aprovado (a)</td>
+                    </tr>
+                    <tr>
+                      <td>10º</td>
+                      <td>Arthur Nogueira de Sousa</td>
+                      <td>820,0</td>
+                      <td>795,5</td>
+                      <td>807,7</td>
+                      <td>Aprovado (a)</td>
+                    </tr>
+                    <tr>
+                      <td>11º</td>
+                      <td>Marie Currie Françóis de Parris</td>
+                      <td>749,3</td>
+                      <td>684,0</td>
+                      <td>716,6</td>
+                      <td>Lista de Espera</td>
+                    </tr>
+                    <tr>
+                      <td>1º</td>
+                      <td>Anna Letícia Alves de Freitas</td>
+                      <td>981,9</td>
+                      <td>980,0</td>
+                      <td>980,9</td>
+                      <td>Aprovado (a)</td>
+                  </tr>
+                  <tr>
+                      <td>2º</td>
+                      <td>Nael Gameplays dos Santos</td>
+                      <td>984,8</td>
+                      <td>973,6</td>
+                      <td>979,2</td>
+                      <td>Aprovado (a)</td>
+                  </tr>
+                  <tr>
+                      <td>3º</td>
+                      <td>Carlos Madeira de Souza</td>
+                      <td>968,5</td>
+                      <td>965,1</td>
+                      <td>966,8</td>
+                      <td>Aprovado (a)</td>
+                  </tr>
+                  <tr>
+                    <td>4º</td>
+                    <td>Jonas Araújo Lima</td>
+                    <td>960,0</td>
+                    <td>897,8</td>
+                    <td>928,9</td>
+                    <td>Aprovado(a)</td>
+                  </tr>
+                  <tr>
+                    <td>5º</td>
+                    <td>Davi Lima dos Santos</td>
+                    <td>947,2</td>
+                    <td>860,0</td>
+                    <td>903,6</td>
+                    <td>Aprovado (a)</td>
+                  </tr>
+                  <tr>
+                    <td>6º</td>
+                    <td>Joana Melo Oliveira</td>
+                    <td>919,9</td>
+                    <td>870,5</td>
+                    <td>895,2</td>
+                    <td>Aprovado (a)</td>
+                  </tr>
+                  <tr>
+                    <td>7º</td>
+                    <td>João Pedro Wilson Gunterg</td>
+                    <td>850,3</td>
+                    <td>874,0</td>
+                    <td>862,1</td>
+                    <td>Aprovado (a)</td>
+                  </tr>
+                  <tr>
+                    <td>8º</td>
+                    <td>Mike Tyson Guntergerb</td>
+                    <td>847,3</td>
+                    <td>860,0</td>
+                    <td>853,6</td>
+                    <td>Aprovado (a)</td>
+                  </tr>
+                  <tr>
+                    <td>9º</td>
+                    <td>Mohammed Alí Salí-AL Bashar</td>
+                    <td>835,3</td>
+                    <td>798,9</td>
+                    <td>817,1</td>
+                    <td>Aprovado (a)</td>
+                  </tr>
+                  <tr>
+                    <td>10º</td>
+                    <td>Arthur Nogueira de Sousa</td>
+                    <td>820,0</td>
+                    <td>795,5</td>
+                    <td>807,7</td>
+                    <td>Aprovado (a)</td>
+                  </tr>
+                  <tr>
+                    <td>11º</td>
+                    <td>Marie Currie Françóis de Parris</td>
+                    <td>749,3</td>
+                    <td>684,0</td>
+                    <td>716,6</td>
+                    <td>Lista de Espera</td>
+                  </tr>
                 </tbody>
             </table>
         </div>
     </article>
+    <br>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">First</th>
+          <th scope="col">Last</th>
+          <th scope="col">Handle</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>Mark</td>
+          <td>Otto</td>
+          <td>@mdo</td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Jacob</td>
+          <td>Thornton</td>
+          <td>@fat</td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td colspan="2">Larry the Bird</td>
+          <td>@twitter</td>
+        </tr>
+      </tbody>
+    </table>
    </main>
 
 

@@ -27,8 +27,6 @@ body{
 
 header{
     background-color: var(--corazul);
-    position: sticky;
-    top: 0;
 }
 
 .navbar{
@@ -62,22 +60,32 @@ table{
     border-collapse: collapse;
     margin: auto;
     font-family: var(--fonte-padrão);
+    position: relative;
 }
 
-.table-aprovados{
+.tabela-aprovados{
   overflow-x: auto;
 }
 
 th, td{
-    text-align: center;
     border: 1px solid black;
     padding: 8px;
     background-color: white;
 }
-thead th {
-        position: sticky;
-        top: 0;
-      }
+
+td{
+  text-align: center;
+}
+thead th{
+  text-align: center;
+  position: sticky;
+  top: 0;
+}
+
+.nomes{
+  text-align: left;
+}
+
 a{
   color: aqua;
   font-weight: 800;
@@ -140,9 +148,8 @@ a{
    <!--Conteúdo principal-->
    <!--Defina uma largura para a tabela-->
    <main>
-    <article>
-        <div class="table-aprovados">
-            <table>
+
+            <table class="table-bordered overflow-x-auto">
                 <thead>
                     <tr>
                         <th rowspan="2" scope="col">Posição</th>
@@ -152,14 +159,14 @@ a{
                         <th rowspan="2" scope="col">Situação</th>
                     </tr>
                     <tr>
-                        <th scope="col">1ª Fase</th>
-                        <th scope="col">2ª Fase</th>
-                    </tr>
+                      <th scope="col">1ª Fase</th>
+                      <th scope="col">2ª Fase</th>
+                  </tr>
                 </thead>
-                <tbody>
+                <tbody class="table-group-divider">
                     <tr>
                         <td>1º</td>
-                        <td>Anna Letícia Alves de Freitas</td>
+                        <td class="nomes">Anna Letícia Alves de Freitas</td>
                         <td>981,9</td>
                         <td>980,0</td>
                         <td>980,9</td>
@@ -167,7 +174,7 @@ a{
                     </tr>
                     <tr>
                         <td>2º</td>
-                        <td>Nael Gameplays dos Santos</td>
+                        <td class="nomes">Nael Gameplays dos Santos</td>
                         <td>984,8</td>
                         <td>973,6</td>
                         <td>979,2</td>
@@ -175,7 +182,7 @@ a{
                     </tr>
                     <tr>
                         <td>3º</td>
-                        <td>Carlos Madeira de Souza</td>
+                        <td class="nomes">Carlos Madeira de Souza</td>
                         <td>968,5</td>
                         <td>965,1</td>
                         <td>966,8</td>
@@ -183,7 +190,7 @@ a{
                     </tr>
                     <tr>
                       <td>4º</td>
-                      <td>Jonas Araújo Lima</td>
+                      <td class="nomes">Jonas Araújo Lima</td>
                       <td>960,0</td>
                       <td>897,8</td>
                       <td>928,9</td>
@@ -191,7 +198,7 @@ a{
                     </tr>
                     <tr>
                       <td>5º</td>
-                      <td>Davi Lima dos Santos</td>
+                      <td class="nomes">Davi Lima dos Santos</td>
                       <td>947,2</td>
                       <td>860,0</td>
                       <td>903,6</td>
@@ -199,7 +206,7 @@ a{
                     </tr>
                     <tr>
                       <td>6º</td>
-                      <td>Joana Melo Oliveira</td>
+                      <td class="nomes">Joana Melo Oliveira</td>
                       <td>919,9</td>
                       <td>870,5</td>
                       <td>895,2</td>
@@ -207,7 +214,7 @@ a{
                     </tr>
                     <tr>
                       <td>7º</td>
-                      <td>João Pedro Wilson Gunterg</td>
+                      <td class="nomes">João Pedro Wilson Gunterg</td>
                       <td>850,3</td>
                       <td>874,0</td>
                       <td>862,1</td>
@@ -215,7 +222,7 @@ a{
                     </tr>
                     <tr>
                       <td>8º</td>
-                      <td>Mike Tyson Guntergerb</td>
+                      <td class="nomes">Mike Tyson Guntergerb</td>
                       <td>847,3</td>
                       <td>860,0</td>
                       <td>853,6</td>
@@ -223,7 +230,7 @@ a{
                     </tr>
                     <tr>
                       <td>9º</td>
-                      <td>Mohammed Alí Salí-AL Bashar</td>
+                      <td class="nomes">Mohammed Alí Salí-AL Bashar</td>
                       <td>835,3</td>
                       <td>798,9</td>
                       <td>817,1</td>
@@ -231,7 +238,7 @@ a{
                     </tr>
                     <tr>
                       <td>10º</td>
-                      <td>Arthur Nogueira de Sousa</td>
+                      <td class="nomes">Arthur Nogueira de Sousa</td>
                       <td>820,0</td>
                       <td>795,5</td>
                       <td>807,7</td>
@@ -239,7 +246,7 @@ a{
                     </tr>
                     <tr>
                       <td>11º</td>
-                      <td>Marie Currie Françóis de Parris</td>
+                      <td class="nomes">Marie Currie Françóis de Parris</td>
                       <td>749,3</td>
                       <td>684,0</td>
                       <td>716,6</td>
@@ -335,38 +342,7 @@ a{
                   </tr>
                 </tbody>
             </table>
-        </div>
-    </article>
-    <br>
-    <table class="table">
-      <thead>
-        <tr>
-          <th scope="col">#</th>
-          <th scope="col">First</th>
-          <th scope="col">Last</th>
-          <th scope="col">Handle</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th scope="row">1</th>
-          <td>Mark</td>
-          <td>Otto</td>
-          <td>@mdo</td>
-        </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
-        </tr>
-        <tr>
-          <th scope="row">3</th>
-          <td colspan="2">Larry the Bird</td>
-          <td>@twitter</td>
-        </tr>
-      </tbody>
-    </table>
+
    </main>
 
 

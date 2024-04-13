@@ -22,6 +22,11 @@ body{
   background-color: aqua;
 }
 
+header{
+    position: sticky;
+    top: 0;
+}
+
 .navbar{
     background-color: var(--corazul);
 }
@@ -74,4 +79,22 @@ section p{
 
 .navbar-toggler{
     border: 0px solid #1359A3;
+}
+
+.page::after{
+    content: ' 👈';
+}
+
+footer{
+    background-color: var(--corazul);
+    font-family: var(--fonte-padrão);
+}
+
+footer > p{
+    color: white;
+    margin-left: 15px;
+}
+
+footer ul li{
+    color: white;
 }
